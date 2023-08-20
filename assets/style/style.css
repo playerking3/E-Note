@@ -4,6 +4,7 @@
 :root{
 	--neutro: #f5f9ff;
 	--principal: #19408a;
+	--principalBG: #d8e3f8;
 	--confirm: #00c2a0;
 	--cancel: #c24100;
 	--attention: #dcdc38;
@@ -17,13 +18,14 @@
 
 body{
 	background: var(--neutro);
+	overflow-x: hidden;
 }
 
 header{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 8px;
+	padding: 12px;
 	border-bottom: solid 2px var(--principal);
 	border-radius: 8px;
 }
@@ -39,4 +41,35 @@ header h1{
 	background-color: var(--principal);
 	color: var(--neutro);
 	font-weight: bold;
+}
+
+#lupa{
+	background-color: transparent;
+	color: var(--principal);
+	border: none;
+	font-size: large;
+}
+
+.formInput{
+	border: none;
+	background-color: transparent;
+	border-bottom: solid 2px var(--principal);
+	margin: 4px;
+	padding: 2px;
+	transition: 0.5s;
+}
+
+.formInput:focus{
+	transition: 0.5s;
+	outline: none;
+	background-color: var(--principalBG);
+}
+
+#criar{
+	position: fixed;
+	top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    background-color: var(--neutro);
+
 }

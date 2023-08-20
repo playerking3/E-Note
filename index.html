@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="assets/style/style.css">
 	<link rel="stylesheet" type="text/css" href="assets/style/responsive.css">
-	<script defer src="assets/scripts/script.js"></script>
+	<script defer src="assets/script/script.js"></script>
 	<script src="https://kit.fontawesome.com/9879f90344.js" crossorigin="anonymous"></script>
 	<title>E-Note | Inicio</title>
 </head>
@@ -18,10 +18,19 @@
 			<button id="new" class="btn1">+ Nova anotação</button>
 		</div>
 		<div>
-			<input type="text" name="note-search">
-			<button id="lupa"><i class="fa-solid fa-magnifying-glass"></i></button>
+			<input type="text" name="note-search" id="pesquisa" class="formInput" placeholder="Pesquise suas notas" style="visibility: hidden;">
+			<button id="lupa"><i class="fa-solid fa-magnifying-glass" onclick="show()"></i></button>
 		</div>
-		
+		<div id="criar">
+			<h2>Criar anotação</h2>
+			<form id="criarform">
+				<div>
+					<label for="titulo">Título</label>
+					<input type="text" name="titulo" required autocomplete="off" placeholder="Título da anotação" class="formInput">	
+				</div>
+				<div></div>
+			</form>
+		</div>
 	</header>
 	<main>
 		
