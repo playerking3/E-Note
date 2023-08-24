@@ -46,6 +46,7 @@ header h1{
 	background-color: var(--principal);
 	color: var(--neutro);
 	font-weight: bold;
+	cursor: pointer;
 }
 
 #lupa{
@@ -53,6 +54,7 @@ header h1{
 	color: var(--principal);
 	border: none;
 	font-size: large;
+	cursor: pointer;
 }
 
 .formInput{
@@ -80,6 +82,7 @@ header h1{
 	padding: 16px;
 	border-radius: 0px 0px 12px 12px;
 	transition: 0.5s ease-in-out;
+	z-index: 2;
 
 }
 
@@ -168,6 +171,10 @@ header h1{
 
 .prazo{
 	height: fit-content;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 .box{
 	background-color: var(--neutro);
@@ -225,6 +232,7 @@ header h1{
 	font-weight: bold;
 	position: relative;
 	transition: 0.2s;
+	cursor: pointer;
 }
 .btns:hover{
 	color: white;

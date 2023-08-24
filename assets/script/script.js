@@ -34,5 +34,24 @@ confirma.addEventListener("submit",(event) => {
 	let prazo = data.get("prazo")
 
 	console.log(titulo, conteudo, prazo)
+	secaoPrazo = document.getElementById("secPrazo")
+	secaoPrazo.innerHTML +=  `
+	<div class="box" id="card">
+		<div class="divtitulo">
+			<h4 id="">`+titulo+`</h4>
+		</div>
+		<div>
+			<p class= "desc">`+conteudo+`</p>
+		</div>
+		<div class="divbotao">
+			<button class="editar"><i class="fa-solid fa-pen-to-square"></i></button>
+			<button class="excluir" onclick="tiraCard(this)"><i class="fa-solid fa-trash-can"></i></button>
+		</div>
+	</div>
+	`
 	fechar(document.getElementById("criarform"))
 })
+
+function tiraCard(element) {
+	element.parentElement.parentElement.remove()
+}
