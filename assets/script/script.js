@@ -2,7 +2,7 @@ pesquisa = document.getElementById('pesquisa')
 popup = document.getElementById('criar')
 
 function show(){
-	pesquisa.style.visibility = 'visible'
+	pesquisa.style.display = 'inline-block'
 }
 
 function habilitar(element){

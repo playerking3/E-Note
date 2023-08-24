@@ -14,11 +14,11 @@
 		<div>
 			<h1 class="nome">E-Note</h1>
 		</div>
-		<div>
+		<div class="divnew">
 			<button id="new" class="btn1" onclick="abrir()">+ Nova anotação</button>
 		</div>
-		<div>
-			<input type="text" name="note-search" id="pesquisa" class="formInput" placeholder="Pesquise suas notas" style="visibility: hidden;">
+		<div class="divlupa">
+			<input type="text" name="note-search" id="pesquisa" class="formInput" placeholder="Pesquise suas notas" style="display:none;">
 			<button id="lupa"><i class="fa-solid fa-magnifying-glass" onclick="show()"></i></button>
 		</div>
 		<div id="escuro" style="display: none;"></div>
@@ -50,7 +50,42 @@
 		</div>
 	</header>
 	<main>
-		
+		<section class="btn">
+			<button class="btns">No Prazo</button>
+			<button class="btns">Concluídas</button>
+			<button class="btns">Atrasadas</button>
+		</section>
+		<section class="prazo">
+			<div class="box">
+				<div class="divtitulo">
+					<h4>Título</h4>
+				</div>
+				<div class="divbotao">
+					<button class="editar"><i class="fa-solid fa-pen-to-square"></i></button>
+					<button class="excluir"><i class="fa-solid fa-trash-can"></i></button>
+				</div>
+			</div>
+		</section>
+		<!-- <section>
+			<div>
+				<div class="divtitulo">
+					<h4>Título</h4>
+				</div>
+				<div>
+					
+				</div>
+			</div>
+		</section>
+		<section>
+			<div>
+				<div class="divtitulo">
+					<h4>Título</h4>
+				</div>
+				<div>
+					
+				</div>
+			</div>
+		</section> -->
 	</main>
 	<footer>
 		
