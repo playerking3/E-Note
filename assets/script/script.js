@@ -3,7 +3,7 @@ popup = document.getElementById('criar')
 confirma = document.getElementById('criarform')
 
 function show(){
-	pesquisa.style.visibility = 'visible'
+	pesquisa.style.display = 'inline-block'
 }
 
 function habilitar(element){
