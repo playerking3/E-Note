@@ -1,7 +1,6 @@
 pesquisa = document.getElementById('pesquisa')
 popup = document.getElementById('criar')
 confirma = document.getElementById('criarform')
-
 function show(){
 	pesquisa.style.display = 'inline-block'
 }
@@ -33,25 +32,56 @@ confirma.addEventListener("submit",(event) => {
 	let conteudo = data.get("conteudo")
 	let prazo = data.get("prazo")
 
-	console.log(titulo, conteudo, prazo)
-	secaoPrazo = document.getElementById("secPrazo")
-	secaoPrazo.innerHTML +=  `
-	<div class="box" id="card">
-		<div class="divtitulo">
-			<h4 id="">`+titulo+`</h4>
-		</div>
-		<div>
-			<p class= "desc">`+conteudo+`</p>
-		</div>
-		<div class="divbotao">
-			<button class="editar"><i class="fa-solid fa-pen-to-square"></i></button>
-			<button class="excluir" onclick="tiraCard(this)"><i class="fa-solid fa-trash-can"></i></button>
-		</div>
-	</div>
-	`
+	criar_json(titulo,conteudo,prazo)
+	criar_card()
 	fechar(document.getElementById("criarform"))
 })
 
-function tiraCard(element) {
-	element.parentElement.parentElement.remove()
+function tiraCard(element, key) {
+	var card = element.parentElement.parentElement
+	var lista = JSON.parse(localStorage.getItem('prazo'))
+	var index = key
+	lista.splice(index,1)
+	localStorage.setItem('prazo',JSON.stringify(lista))
+	criar_card()
 }
+
+function criar_json(titulo,conteudo,prazo){
+	var contagem = JSON.parse(localStorage.getItem('prazo')) ?? []
+
+	var valores = {
+		titulo: titulo,
+		conteudo: conteudo,
+		prazo: prazo,
+	}
+
+	var string = JSON.stringify(valores)
+	contagem.push(string)
+	lista = JSON.stringify(contagem)
+	localStorage.setItem('prazo', lista)
+}
+
+function criar_card(){
+	secaoPrazo = document.getElementById("secPrazo")
+	secaoPrazo.innerHTML = ""
+
+	var novos = JSON.parse(localStorage.getItem('prazo'))
+	for (var [key, i] of novos.entries()){
+		novos2 = JSON.parse(i)
+	secaoPrazo.innerHTML +=  `
+	<div class="box" id="card">
+		<div class="divtitulo">
+			<h4 id="">`+novos2.titulo+`</h4>
+		</div>
+		<div>
+			<p class= "desc">`+novos2.conteudo+`</p>
+		</div>
+		<div class="divbotao">
+			<button class="editar"><i class="fa-solid fa-pen-to-square"></i></button>
+			<button class="excluir" onclick="tiraCard(this, ${key})"><i class="fa-solid fa-trash-can"></i></button>
+		</div>
+	</div>
+	`
+	}
+}
+criar_card()
