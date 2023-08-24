@@ -7,6 +7,7 @@
 	--principalBG: #d8e3f8;
 	--confirm: #00c2a0;
 	--cancel: #c24100;
+	--disabled: #dbdbdb;
 	--attention: #dcdc38;
 }
 
@@ -54,6 +55,7 @@ header h1{
 	border: none;
 	background-color: transparent;
 	border-bottom: solid 2px var(--principal);
+	border-left: solid 2px var(--principal);
 	margin: 4px;
 	padding: 2px;
 	transition: 0.5s;
@@ -71,5 +73,91 @@ header h1{
     left: 50%;
     transform: translate(-50%, 0%);
     background-color: var(--neutro);
+	padding: 16px;
+	border-radius: 0px 0px 12px 12px;
+	transition: 0.5s ease-in-out;
 
+}
+
+#criar h2{
+	text-align: center;
+}
+
+
+#criarform div{
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 6px;
+    padding-top: 6px;
+}
+
+.prazodiv{
+	flex-direction: row !important;
+	justify-content: space-between;
+}
+
+.prazodiv div{
+	flex-direction: row !important;
+	gap: 8px;
+}
+
+#conteudo{
+	resize: none;
+	border: none;
+	border-left: solid 2px var(--principal);
+	border-bottom: solid 2px var(--principal);
+	transition: 0.5s;
+	background-color: transparent;
+	padding: 2px;
+}
+
+#conteudo:focus{
+	transition: 0.5s;
+	outline: none;
+	background-color: var(--principalBG);
+}
+
+#prazocheck{
+	accent-color: var(--confirm);
+	size: 1.3;
+	cursor: pointer;
+}
+
+#prazo{
+	border: none;
+	background: transparent;
+	cursor: pointer;
+
+}
+
+#prazo:disabled{
+	background: var(--disabled);
+	cursor: not-allowed;
+}
+
+#escuro{
+	position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.29);
+    top: 0;
+    left: 0;
+}
+
+.confirm{
+	background: var(--confirm);
+	border: none;
+	padding: 8px;
+	border-radius: 16px;
+	color: white;
+	font-weight: bold;
+}
+
+.close{
+	background: transparent;
+	color: var(--cancel);
+	border: none;
+	font-size: x-large;
+	position: absolute;
+	right: 12px;
 }
