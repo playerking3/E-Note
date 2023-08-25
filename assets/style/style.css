@@ -30,8 +30,8 @@ header{
 	grid-template-columns: 1fr 1fr 1fr;
 	align-items: center;
 	padding: 12px;
-	border-bottom: solid 2px var(--principal);
-	border-radius: 8px;
+	border-bottom: solid 2px #FBC00D;
+	background-color: #19408A;
 }
 .divlupa{
 	justify-self: end;
@@ -42,13 +42,16 @@ header{
 header h1{
 	color: var(--principal);
 }
-
+#logo img{
+	width: 15vw;
+	height: 7vw;
+}
 .btn1{
 	padding: 8px;
 	border: none;
 	border-radius: 50px;
-	background-color: var(--principal);
-	color: var(--neutro);
+	background-color: #FBC00D;
+	color: black;
 	font-weight: bold;
 	cursor: pointer;
 	text-decoration: none;
@@ -70,7 +73,7 @@ header h1{
 
 #lupa{
 	background-color: transparent;
-	color: var(--principal);
+	color: white;
 	border: none;
 	font-size: large;
 	cursor: pointer;
@@ -79,11 +82,12 @@ header h1{
 .formInput{
 	border: none;
 	background-color: transparent;
-	border-bottom: solid 2px var(--principal);
-	border-left: solid 2px var(--principal);
+	border-bottom: solid 2px white;
+	border-left: solid 2px white;
 	margin: 4px;
 	padding: 2px;
 	transition: 0.5s;
+	color: white;
 }
 
 .formInput:focus{
