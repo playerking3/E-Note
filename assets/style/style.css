@@ -51,6 +51,7 @@ header h1{
 	color: var(--neutro);
 	font-weight: bold;
 	cursor: pointer;
+	text-decoration: none;
 }
 .btn1:hover{
 	box-shadow: 3px 3px 0px rgb(161, 161, 161);
@@ -198,8 +199,22 @@ header h1{
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	border: 2px #19408A solid;
-	border-bottom: 10px #19408A solid;
+	border: 2px var(--principal) solid;
+	border-bottom: 10px var(--principal) solid;
+	border-radius: 10%
+}
+
+.box-concluida{
+	background-color: var(--neutro);
+	margin: 1%;
+	width: 20%;
+	height: 35vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	border: 2px var(--confirm) solid;
+	border-bottom: 10px var(--confirm) solid;
 	border-radius: 10%
 }
 .divtitulo{
@@ -249,6 +264,7 @@ i:hover{
 	position: relative;
 	transition: 0.2s;
 	cursor: pointer;
+	text-decoration: none;
 }
 .btns:hover{
 	color: white;
