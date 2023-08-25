@@ -52,6 +52,9 @@ header h1{
 	font-weight: bold;
 	cursor: pointer;
 }
+.btn1:hover{
+	box-shadow: 3px 3px 0px rgb(161, 161, 161);
+}
 
 #lupa{
 	background-color: transparent;
@@ -235,7 +238,7 @@ header h1{
 i:hover{
 	cursor: pointer;
 }
-.btn button{
+.btns{
 	margin: 1% 1%;
 	padding: 8px;
 	border: 2px solid var(--principal);
@@ -274,4 +277,20 @@ i:hover{
 	z-index: -1;
 	border-radius: 50px;
 	transition: 0.2s;
+}
+@keyframes pulsar{
+	0%{
+		scale: 1.2;
+	}
+	50%{
+	scale: 1.5;
+	}
+	100%{
+		scale: 1.2;
+	}
+}
+
+i:hover{
+	animation: pulsar 1s ease-in-out;
+	animation-iteration-count: infinite;
 }
