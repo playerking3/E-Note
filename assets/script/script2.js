@@ -71,15 +71,15 @@ function criar_card(){
 		let novos2 = i
 		secaoPrazo.innerHTML +=  `
 		<div class="box-concluida" id="card">
-			<div class="divtitulo">
+			<div class="divtitulo divtitulo2">
 				<h4 id="">`+novos2.titulo+`</h4>
 			</div>
 			<div>
 				<p class= "desc">`+novos2.conteudo+`</p>
 			</div>
 			<div class="divbotao">
-				<button class="editar"><i class="fa-solid fa-pen-to-square"></i></button>
-				<button class="excluir" onclick="tiraCard(this, ${key})"><i class="fa-solid fa-trash-can"></i></button>
+				<button class="editar editar2"><i class="fa-solid fa-pen-to-square"></i></button>
+				<button class=" excluir excluir2" onclick="tiraCard(this, ${key})"><i class="fa-solid fa-trash-can"></i></button>
 			</div>
 		</div>
 		`
