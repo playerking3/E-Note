@@ -68,21 +68,30 @@ function criar_card(){
 	var novos = JSON.parse(localStorage.getItem('prazo'))
 	for (var [key, i] of novos.entries()){
 		novos2 = JSON.parse(i)
-	secaoPrazo.innerHTML +=  `
-	<div class="box" id="card">
-		<div class="divtitulo">
-			<h4 id="">`+novos2.titulo+`</h4>
+		secaoPrazo.innerHTML +=  `
+		<div class="box" id="card">
+			<div class="divtitulo">
+				<h4 id="">`+novos2.titulo+`</h4>
+			</div>
+			<div>
+				<p class= "desc">`+novos2.conteudo+`</p>
+			</div>
+			<div class="divbotao">
+				<button class="editar"><i class="fa-solid fa-pen-to-square"></i></button>
+				<button class="concluir" onclick="concluir('`+i+`')"><i class="fa-solid fa-check" style="color: #00c2a0;"></i></button>
+				<button class="excluir" onclick="tiraCard(this, ${key})"><i class="fa-solid fa-trash-can"></i></button>
+			</div>
 		</div>
-		<div>
-			<p class= "desc">`+novos2.conteudo+`</p>
-		</div>
-		<div class="divbotao">
-			<button class="editar"><i class="fa-solid fa-pen-to-square"></i></button>
-			<button class="concluir"><i class="fa-solid fa-check" style="color: #00c2a0;"></i></button>
-			<button class="excluir" onclick="tiraCard(this, ${key})"><i class="fa-solid fa-trash-can"></i></button>
-		</div>
-	</div>
-	`
+		`
 	}
 }
+
+function concluir(objeto){
+	console.log('teste');
+	let contagem = JSON.parse(localStorage.getItem('concluidas')) ?? []
+	contagem.push(objeto)
+	lista = JSON.stringify(contagem)
+	localStorage.setItem('concluidas', lista)
+}
+
 criar_card()
