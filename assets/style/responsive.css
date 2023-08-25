@@ -1,10 +1,13 @@
 @media(max-width:900px){
-    .box-concluida{
+    .box-concluida,.box{
         width: 40%;
     }
 }
 @media(max-width:600px){
-    .box-concluida{
+    .box-concluida,.box{
         width: 90%;
+    }
+    #criar{
+        width: 80%;
     }
 }
