@@ -39,10 +39,10 @@ confirma.addEventListener("submit",(event) => {
 
 function tiraCard(element, key) {
 	var card = element.parentElement.parentElement
-	var lista = JSON.parse(localStorage.getItem('prazo'))
+	var lista = JSON.parse(localStorage.getItem('concluidas'))
 	var index = key
 	lista.splice(index,1)
-	localStorage.setItem('prazo',JSON.stringify(lista))
+	localStorage.setItem('concluidas',JSON.stringify(lista))
 	criar_card()
 }
 
@@ -65,24 +65,24 @@ function criar_card(){
 	secaoPrazo = document.getElementById("secPrazo")
 	secaoPrazo.innerHTML = ""
 
-	var novos = JSON.parse(localStorage.getItem('prazo'))
+	var novos = JSON.parse(localStorage.getItem('concluidas')) ?? []
 	for (var [key, i] of novos.entries()){
-		novos2 = JSON.parse(i)
-	secaoPrazo.innerHTML +=  `
-	<div class="box" id="card">
-		<div class="divtitulo">
-			<h4 id="">`+novos2.titulo+`</h4>
+		console.log(key, i)
+		let novos2 = i
+		secaoPrazo.innerHTML +=  `
+		<div class="box-concluida" id="card">
+			<div class="divtitulo">
+				<h4 id="">`+novos2.titulo+`</h4>
+			</div>
+			<div>
+				<p class= "desc">`+novos2.conteudo+`</p>
+			</div>
+			<div class="divbotao">
+				<button class="editar"><i class="fa-solid fa-pen-to-square"></i></button>
+				<button class="excluir" onclick="tiraCard(this, ${key})"><i class="fa-solid fa-trash-can"></i></button>
+			</div>
 		</div>
-		<div>
-			<p class= "desc">`+novos2.conteudo+`</p>
-		</div>
-		<div class="divbotao">
-			<button class="editar"><i class="fa-solid fa-pen-to-square"></i></button>
-			<button class="concluir"><i class="fa-solid fa-check" style="color: #00c2a0;"></i></button>
-			<button class="excluir" onclick="tiraCard(this, ${key})"><i class="fa-solid fa-trash-can"></i></button>
-		</div>
-	</div>
-	`
+		`
 	}
 }
 criar_card()
