@@ -69,7 +69,7 @@ header h1{
 	text-decoration: none;
 }
 .btn1:hover,.btn2:hover{
-	box-shadow: 3px 3px 0px rgb(161, 161, 161);
+	box-shadow: 2px 2px 0px #774f00;
 }
 
 #lupa{
@@ -130,7 +130,6 @@ header h1{
 	flex-direction: row !important;
 	gap: 8px;
 }
-
 #conteudo{
 	resize: none;
 	border: none;
@@ -140,6 +139,20 @@ header h1{
 	background-color: transparent;
 	padding: 2px;
 }
+#pesquisa::placeholder {
+	color: white;
+  }
+#pesquisa:focus{
+	color: black;
+}
+#pesquisa{
+	color: white;
+	border-bottom: 1px solid white;
+	border-left: 1px solid white;
+}
+#pesquisa:focus::placeholder{
+	color: black;
+  }
 
 #conteudo:focus{
 	transition: 0.5s;
