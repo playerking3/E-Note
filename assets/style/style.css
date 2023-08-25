@@ -52,7 +52,17 @@ header h1{
 	font-weight: bold;
 	cursor: pointer;
 }
-.btn1:hover{
+.btn2{
+	margin: 5px;
+	padding: 8px;
+	border: 2px solid var(--principal);
+	border-radius: 50px;
+	background-color: var(--neutro);
+	color: var(--principal);
+	font-weight: bold;
+	cursor: pointer;
+}
+.btn1:hover,.btn2:hover{
 	box-shadow: 3px 3px 0px rgb(161, 161, 161);
 }
 
@@ -278,19 +288,19 @@ i:hover{
 	border-radius: 50px;
 	transition: 0.2s;
 }
-@keyframes pulsar{
-	0%{
-		scale: 1.2;
-	}
-	50%{
-	scale: 1.5;
-	}
-	100%{
-		scale: 1.2;
-	}
+i{
+	transition: 0.5s;
 }
-
 i:hover{
-	animation: pulsar 1s ease-in-out;
-	animation-iteration-count: infinite;
+	transition: 0.5s;
+	scale: 1.2;
+}
+.concluir:hover{
+	color: #000000;
+}
+.editar:hover{
+	color: #0b295c;
+}
+.excluir:hover{
+	color: #9d0303;
 }
