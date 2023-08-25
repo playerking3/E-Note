@@ -1,0 +1,10 @@
+@media(max-width:900px){
+    .box-concluida{
+        width: 40%;
+    }
+}
+@media(max-width:600px){
+    .box-concluida{
+        width: 90%;
+    }
+}
