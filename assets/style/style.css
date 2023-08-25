@@ -48,7 +48,8 @@ header h1{
 	height: 7vw;
 }
 .btn1{
-	padding: 8px;
+	padding: 10px;
+	margin: 10px;
 	border: none;
 	border-radius: 50px;
 	background-color: var(--amarelologo);
@@ -58,7 +59,7 @@ header h1{
 	text-decoration: none;
 }
 .btn2{
-	margin: 5px;
+	margin: 10px;
 	padding: 8px;
 	border: 2px solid var(--principal);
 	border-radius: 50px;
@@ -69,6 +70,7 @@ header h1{
 	text-decoration: none;
 }
 .btn1:hover,.btn2:hover{
+	scale: 1.1;
 	box-shadow: 2px 2px 0px #774f00;
 }
 
