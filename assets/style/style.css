@@ -8,6 +8,7 @@
 	--cancel: #da0c0c;
 	--disabled: #dbdbdb;
 	--attention: #dcdc38;
+	--amarelologo: #FBC00D;
 }
 
 *{
@@ -30,7 +31,7 @@ header{
 	grid-template-columns: 1fr 1fr 1fr;
 	align-items: center;
 	padding: 12px;
-	border-bottom: solid 2px #FBC00D;
+	border-bottom: solid 2px var(--amarelologo);
 	background-color: #19408A;
 }
 .divlupa{
@@ -50,7 +51,7 @@ header h1{
 	padding: 8px;
 	border: none;
 	border-radius: 50px;
-	background-color: #FBC00D;
+	background-color: var(--amarelologo);
 	color: black;
 	font-weight: bold;
 	cursor: pointer;
@@ -87,7 +88,6 @@ header h1{
 	margin: 4px;
 	padding: 2px;
 	transition: 0.5s;
-	color: white;
 }
 
 .formInput:focus{
